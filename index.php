@@ -86,7 +86,7 @@
                 <h2 class="subtittle-intro">¿Quieres estar el tanto de todos los eventos y festivales?</h2>
                 <div class="container-newsletter">
                     <div class="background-newsletter">
-                        <li><input class="input-email" type="email" placeholder="Su correo electrónico"></li>
+                        <input class="input-email" type="email" placeholder="Su correo electrónico">
                         <input class="submit-btn" type="submit" value="suscribirse al boletín">
                     </div>
                 </div>
