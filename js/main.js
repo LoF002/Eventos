@@ -18,3 +18,22 @@ window.onclick = function(e){
         nav.style.left="-24em";
     }
 }
+
+const app = Vue.createApp({
+    data(){
+        return {
+            priceK: 1500,
+            priceA: 3000,
+            qtyK: 0,
+            qtyA: 0,
+            total: 0,
+            email: '',
+            name: '',
+        }
+    },
+    methods: {
+        chargeTotal(total) {
+            this.total = total;
+        }
+    }
+});

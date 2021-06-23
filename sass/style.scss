@@ -79,6 +79,9 @@ html {
     font-size: 25px;
     font-weight: $bold;
 }
+.top-nav-link:hover{
+    color: $ligth-purple;       
+}
 
 .background-search {
     padding: .3em;

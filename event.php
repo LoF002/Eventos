@@ -14,10 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="./css/styleEvent.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div id="app" class="container-fluid">
 
         <!--background-->
         <div class="background-top">
@@ -111,53 +112,42 @@
                     <div class="modal-body">
                         <h5 class="tittle-modal">Título o nombre del evento</h5>
                         <p class="sub-tittle-modal">revisar y realizar registro</p>
-                        <div class="row row-modal">
-                            <div class="col-6">Menor de edad</div>
-                            <div class="col-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault"></label>
-                                </div>
-                            </div>
-                            <div class="col-4"><input class="input-cantidad" type="text" placeholder="cantidad"></div>
-                        </div>
-                        <div class="row row-modal">
-                            <div class="col-6">Mayor de edad</div>
-                            <div class="col-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault"></label>
-                                </div>
-                            </div>
-                            <div class="col-4"><input class="input-cantidad" type="text" placeholder="cantidad"></div>
-                        </div>
-                        <div class="line-modal"></div>
+
                         <div class="row">
-                            <div class="col-9">Precio por menor de edad</div>
-                            <div class="col-3">₡1.500</div>
+                            <div class="col-auto">
+                                <p>Menor de edad</p>
+                                <p>Mayor de edad</p>
+                            </div>
+                            <div class="col-auto">
+                                    <p>Valor: ₡{{priceK}} </p>
+                                    <p>Valor: ₡{{priceA}} </p>
+                            </div>
+                            <div class="col-1">
+                                <label for="quantityK" class="visually-hidden">Qty</label>
+                                <input type="number" v-model="qtyK" class="input-C pt-sm-0 pb-sm-0" id="quantityK" placeholder="0" required>
+                                <label for="quantityA" class="visually-hidden">Qty</label>
+                                <input type="number" v-model="qtyA" class="input-C pt-sm-0 pb-sm-0 mt-1" id="quantityA" placeholder="0" required>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-9">Precio por mayor de edad</div>
-                            <div class="col-3">-</div>
-                        </div>
+
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total por menores de edad</div>
-                            <div class="col-3">₡15.000</div>
+                            <div class="col-3">₡{{ qtyK*priceK }}</div>
                         </div>
                         <div class="row">
                             <div class="col-9">Total por mayores de edad</div>
-                            <div class="col-3">-</div>
+                            <div class="col-3">₡{{ qtyA*priceA }}</div>
                         </div>
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total</div>
-                            <div class="col-3">₡15.000</div>
+                            <div class="col-3">₡{{ (qtyK*priceK) + (qtyA*priceA) }}</div>
                         </div>
                         <div class="line-modal"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal"
+                        <button v-on:click="chargeTotal((qtyK*priceK) + (qtyA*priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal"
                             data-bs-dismiss="modal">Siguiente</button>
                     </div>
                 </div>
@@ -196,20 +186,24 @@
                         <div class="line-modal"></div>
                         <div class="row">
                             <div class="col-9">Total</div>
-                            <div class="col-3">₡15.000</div>
+                            <div class="col-3">₡{{total}}</div>
                         </div>
                         <div class="line-modal"></div>
 
                         <div class="form-modal">
                             <p class="tittle-form">Registro a nombre de</p>
-                            <input class="input-form" type="text" placeholder="Nombre completo">
-                            <input class="input-form" type="text" placeholder="Correo electrónico">
+                            <input v-model="name" class="input-form" type="text" placeholder="Nombre completo">
+                            <input v-model="email" class="input-form" type="text" placeholder="Correo electrónico">
                         </div>
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal"
-                            data-bs-dismiss="modal">Finalizar registro</button>
+                        <div class="row">
+                            <div class="col"><button type="button" class="btn modal-btn" data-bs-target="#modalRegistration" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Regresar</button></div>
+                            <div class="col"><button type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Finalizar registro</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,10 +232,10 @@
                                 <div class="col-9">Título o nombre del evento</div>
                             </div>
                             <div class="row">
-                                <div class="col-9">Nombre completo</div>
+                                <div class="col-9">{{name}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-9">Correo electrónico</div>
+                                <div class="col-9">{{email}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-9">Método de pago</div>
@@ -249,7 +243,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-9">Total</div>
-                                <div class="col-3">₡15.000</div>
+                                <div class="col-3">₡{{total}}</div>
                             </div>
                             <div class="line-modal"></div>
 
@@ -345,7 +339,12 @@
         <!--footer-->
 
     </div>
+
     <script src="./js/main.js"></script>
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
+
 </body>
 
 </html>
