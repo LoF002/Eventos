@@ -100,10 +100,10 @@ const app = Vue.createApp({
             this.total = total;
         },
         checkInventory() {
-            let allQTY=0;
-            allQTY=Number(this.qtyK)+Number(this.qtyA);
-            console.log(allQTY);
-            if (allQTY > this.inventory) {
+            let allqty = 0;
+            allqty += Number(this.qtyK) + Number(this.qtyA);
+            console.log(allqty);
+            if (allqty > this.events[this.selectedEvent].inventory) {
                 this.available = false;
             } else {
                 this.available = true;

@@ -115,7 +115,7 @@
                     </div>
                     <div class="modal-body">
                         <h5 class="tittle-modal">{{events[selectedEvent].title}}</h5>
-                        <p class="sub-tittle-modal">revisar y realizar registro</p>
+                        <p class="sub-tittle-modal">revisar y realizar registro, cupos disponibles {{events[selectedEvent].inventory}}</p>
 
                         <div class="row">
                             <div class="col-auto">
@@ -151,8 +151,10 @@
                         <div class="line-modal"></div>
                     </div>
                     <div class="modal-footer">
+
                         <button v-if="available" v-on:click="chargeTotal((qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
                         <button v-else type="button" class="btn modal-btn" disabled>Siguiente</button>
+
                     </div>
                 </div>
             </div>
