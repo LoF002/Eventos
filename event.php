@@ -6,14 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Name</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous">
-    </script>
+
+    <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!--fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!--css-->
     <link rel="stylesheet" href="./css/styleEvent.css" rel="stylesheet">
+
+    <!--vue-->
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 
@@ -42,9 +50,7 @@
                             <nav class="navbar">
                                 <div class="dropdown">
 
-                                    <a class="top-nav-link tittle-categorias dropdown-toggle" href="#" role="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                        aria-expanded="false">Categorías</a>
+                                    <a class="top-nav-link tittle-categorias dropdown-toggle" href="#" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
 
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a class="dropdown-item top-nav-link" href="#">Ciclismo</a></li>
@@ -88,12 +94,11 @@
             <!--event-section-->
             <section class="event-section">
                 <h3 class="tittle-event">Título o nombre</h3>
-                <img class="img-event" src="./img/mountainbike.png" alt="mountainbike">
+                <img class="img-event" src="./img/event01.png" alt="mountainbike">
                 <div class="container-price">
                     <p class="price">₡3.000</p>
                 </div>
-                <button type="button" class="btn registration-btn" data-bs-toggle="modal"
-                    data-bs-target="#modalRegistration">registrarse</button>
+                <button type="button" class="btn registration-btn" data-bs-toggle="modal" data-bs-target="#modalRegistration">registrarse</button>
             </section>
             <!--event-section-->
 
@@ -101,8 +106,7 @@
         <!--background-->
 
         <!--restratration-section-->
-        <div class="modal fade" id="modalRegistration" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="modalRegistration" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content container-popup">
                     <div class="modal-header">
@@ -119,8 +123,8 @@
                                 <p>Mayor de edad</p>
                             </div>
                             <div class="col-auto">
-                                    <p>Valor: ₡{{priceK}} </p>
-                                    <p>Valor: ₡{{priceA}} </p>
+                                <p>Valor: ₡{{priceK}} </p>
+                                <p>Valor: ₡{{priceA}} </p>
                             </div>
                             <div class="col-1">
                                 <label for="quantityK" class="visually-hidden">Qty</label>
@@ -147,8 +151,7 @@
                         <div class="line-modal"></div>
                     </div>
                     <div class="modal-footer">
-                        <button v-on:click="chargeTotal((qtyK*priceK) + (qtyA*priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal"
-                            data-bs-dismiss="modal">Siguiente</button>
+                        <button v-on:click="chargeTotal((qtyK*priceK) + (qtyA*priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
                     </div>
                 </div>
             </div>
@@ -170,14 +173,12 @@
 
                         <div class="metodos-pago-mobile">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                 <img class="logo-visa-mobile" src="./img/visaMobile.svg" alt="logo visa">
                                 <label class="form-check-label" for="flexRadioDefault1">VISA</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" checked>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                 <img class="logo-paypal-mobile" src="./img/paypalMobile.svg" alt="logo paypal">
                                 <label class="form-check-label" for="flexRadioDefault2">Paypal</label>
                             </div>
@@ -199,10 +200,8 @@
                     </div>
                     <div class="modal-footer">
                         <div class="row">
-                            <div class="col"><button type="button" class="btn modal-btn" data-bs-target="#modalRegistration" data-bs-toggle="modal"
-                            data-bs-dismiss="modal">Regresar</button></div>
-                            <div class="col"><button type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal"
-                            data-bs-dismiss="modal">Finalizar registro</button></div>
+                            <div class="col"><button type="button" class="btn modal-btn" data-bs-target="#modalRegistration" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button></div>
+                            <div class="col"><button type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal" data-bs-dismiss="modal">Finalizar registro</button></div>
                         </div>
                     </div>
                 </div>
@@ -216,8 +215,7 @@
                 <div class="modal-content container-popup">
                     <div class="modal-header header-resume">
                         <div class="row">
-                            <div class="col-12"><img class="check" src="./img/check-resume-mobile.svg"
-                                    alt="check-resume-mobile"></div>
+                            <div class="col-12"><img class="check" src="./img/check-resume-mobile.svg" alt="check-resume-mobile"></div>
                             <div class="col-12">
                                 <p class="tittle-resume">¡Registro finalizado!</p>
                             </div>
@@ -295,25 +293,23 @@
                 <div id="carousel-related-event" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="img-event-related" src="./img/ruta-de-los-conquistadores.png" alt="ruta-de-los-conquistadores">
+                            <img class="img-event-related" src="./img/event02.png" alt="ruta-de-los-conquistadores">
                             <h3 class="tittle-event-related">Título o nombre</h3>
                         </div>
                         <div class="carousel-item">
-                            <img class="img-event-related" src="./img/ruta-de-los-conquistadores.png" alt="ruta-de-los-conquistadores">
+                            <img class="img-event-related" src="./img/event02.png" alt="ruta-de-los-conquistadores">
                             <h3 class="tittle-event-related">Título o nombre</h3>
                         </div>
                         <div class="carousel-item">
-                            <img class="img-event-related" src="./img/ruta-de-los-conquistadores.png" alt="ruta-de-los-conquistadores">
+                            <img class="img-event-related" src="./img/event02.png" alt="ruta-de-los-conquistadores">
                             <h3 class="tittle-event-related">Título o nombre</h3>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" data-bs-target="#carousel-related-event" type="button"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" data-bs-target="#carousel-related-event" type="button" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </button>
-                    <button class="carousel-control-next" data-bs-target="#carousel-related-event" type="button"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" data-bs-target="#carousel-related-event" type="button" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </button>
