@@ -481,6 +481,12 @@ footer {
         overflow: auto;
         background-color: rgba(0, 0, 0, 0.65);
     }
+    .offcanvas-body{
+        overflow-y: initial;
+    }
+    .navweb{
+        display: none;
+    }
 
     .top-nav {
         display: block;
@@ -489,14 +495,10 @@ footer {
         margin: 0;
         position: fixed;
         top: 0;
-        left: -24em;
-        width: 18.625em;
         height: 100%;
         background: $gray;
-        transition: .5s;
         text-align: left;
         overflow-y: auto;
-        z-index: 3;
     }
 
     .top-nav-item {
@@ -531,16 +533,16 @@ footer {
 
     .mob-menu {
         display: block;
+        position: absolute;
         color: $gray;
         font-size: 2.5em;
-        position: absolute;
+        text-decoration: none;
     }
 
     .background-search {
         padding: 0;
         margin: 0;
-        margin-bottom: 1.4375em;
-        width: 8.1em;
+        width: 10em;
         background: linear-gradient(to right, $ligth-purple, $purple);
         border-radius: 3px;
     }
@@ -562,9 +564,9 @@ footer {
 
     .mob-close {
         display: block;
+        position: absolute;
         color: $ligth-purple;
         font-size: 2.5em;
-        position: absolute;
         right: .5em;
     }
 

@@ -34,25 +34,25 @@
             <!--header-->
             <header>
                 <nav class="top-bar">
-                    <span class="mob-menu fas fa-bars" onclick="openMobileMenu()"></span>
-                    <div class="modal background-dark"></div>
-                    <ul class="top-nav">
-                        <span class="mob-close far fa-times-circle" onclick="closeMobileMenu()"></span>
 
-                        <li class="top-nav-item">
+                    <a class="mob-menu fas fa-bars" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></a>
+
+                    <div class="offcanvas offcanvas-start top-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
                             <div class="background-search">
                                 <input class="input-search" type="text" placeholder="Buscar">
                                 <a class="icon-search" href="#"><i class="fas fa-search"></i></a>
                             </div>
-                        </li>
-
-                        <li class="top-nav-item">
+                            <span type="button" class="mob-close far fa-times-circle" data-bs-dismiss="offcanvas" aria-label="Close"></span>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div>
+                                <a class="top-nav-link tittle-categorias" href="#">Login</a>
+                            </div>
                             <nav class="navbar">
-                                <div class="dropdown">
-
-                                    <a class="top-nav-link tittle-categorias dropdown-toggle" href="#" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
-
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <div class="dropdown mt-3">
+                                    <a class="top-nav-link tittle-categorias dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">Categorías</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <li><a class="dropdown-item top-nav-link" href="#">Ciclismo</a></li>
                                         <li><a class="dropdown-item top-nav-link" href="#">Blicicleta de montaña</a></li>
                                         <li><a class="dropdown-item top-nav-link" href="#">Triatlón</a></li>
@@ -82,10 +82,62 @@
                                     </ul>
                                 </div>
                             </nav>
-                        </li>
+
+                        </div>
+                    </div>
+
+                    <div class="navweb">
+                        <ul class="top-nav">
+
+                            <li class="top-nav-item">
+                                <div class="background-search">
+                                    <input class="input-search" type="text" placeholder="Buscar">
+                                    <a class="icon-search" href="#"><i class="fas fa-search"></i></a>
+                                </div>
+                            </li>
+                            <li class="top-nav-item"><a class="top-nav-link tittle-categorias" href="#">Login</a></li>
+                            <li class="top-nav-item">
+                                <nav class="navbar">
+                                    <div class="dropdown">
+
+                                        <a class="top-nav-link tittle-categorias dropdown-toggle" href="#" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item top-nav-link" href="#">Ciclismo</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Blicicleta de montaña</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Triatlón</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Maratón</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Surf</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Fútbol</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Baloncesto</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Voleibol</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Natación</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Béisbol</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Caminata</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Marcha atlética</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Voleibol playa</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Halterofilia</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Escalada</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Boxeo</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Judo</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Taekwondo</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Deportes acuáticos</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Deportes de motor</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Pruebas combinadas</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Atletismo</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Deportes de precisión</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Deportes de combate</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Deportes colectivos</a></li>
+                                            <li><a class="dropdown-item top-nav-link" href="#">Gratis</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </li>
+
+                        </ul>
+                    </div>
 
 
-                    </ul>
                     <a href="./index.php"><img class="logo-header" src="./img/logoMobile.svg" alt="logo"></a>
                 </nav>
             </header>
@@ -203,12 +255,12 @@
                     <div class="modal-footer">
                         <div class="row">
                             <div class="col">
-                            <button type="button" class="btn modal-btn" data-bs-target="#modalRegistration" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button>
+                                <button type="button" class="btn modal-btn" data-bs-target="#modalRegistration" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button>
                             </div>
                             <div class="col">
-                            <button v-if="isValidName && isValidEmail" type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal" data-bs-dismiss="modal">Finalizar registro</button>
+                                <button v-if="isValidName && isValidEmail" type="button" class="btn modal-btn" data-bs-target="#modal3" data-bs-toggle="modal" data-bs-dismiss="modal">Finalizar registro</button>
 
-                            <button v-else type="button" class="btn btn-secondary" disabled>Finalizar registro</button>
+                                <button v-else type="button" class="btn btn-secondary" disabled>Finalizar registro</button>
                             </div>
                         </div>
                     </div>

@@ -474,6 +474,14 @@ footer {
     background-color: rgba(0, 0, 0, 0.65);
   }
 
+  .offcanvas-body {
+    overflow-y: initial;
+  }
+
+  .navweb {
+    display: none;
+  }
+
   .top-nav {
     display: block;
     padding: 1.25em 1.25em 0;
@@ -481,15 +489,10 @@ footer {
     margin: 0;
     position: fixed;
     top: 0;
-    left: -24em;
-    width: 18.625em;
     height: 100%;
     background: #E3E4E5;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
     text-align: left;
     overflow-y: auto;
-    z-index: 3;
   }
 
   .top-nav-item {
@@ -524,16 +527,16 @@ footer {
 
   .mob-menu {
     display: block;
+    position: absolute;
     color: #E3E4E5;
     font-size: 2.5em;
-    position: absolute;
+    text-decoration: none;
   }
 
   .background-search {
     padding: 0;
     margin: 0;
-    margin-bottom: 1.4375em;
-    width: 8.1em;
+    width: 10em;
     background: -webkit-gradient(linear, left top, right top, from(#573280), to(#23022E));
     background: linear-gradient(to right, #573280, #23022E);
     border-radius: 3px;
@@ -556,9 +559,9 @@ footer {
 
   .mob-close {
     display: block;
+    position: absolute;
     color: #573280;
     font-size: 2.5em;
-    position: absolute;
     right: 0.5em;
   }
 
