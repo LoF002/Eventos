@@ -90,6 +90,7 @@
             <!--intro-section-->
             <section class="intro-section">
                 <h1 class="tittle-intro">Festivales y eventos deportivos en Costa Rica</h1>
+                <h1 class="tittle-intro color-alert">Hola</h1>
                 <h2 class="subtittle-intro">¿Quieres estar el tanto de todos los eventos y festivales?</h2>
                 <div class="container-newsletter">
                     <div class="background-newsletter">
