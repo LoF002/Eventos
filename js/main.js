@@ -1,12 +1,12 @@
 const app = Vue.createApp({
     data() {
         return {
-            qtyA: 0,
             qtyK: 0,
+            qtyA: 0,
             selectedEvent: 0,
             total: 0,
             inventory: 0,
-            available: true,
+            availabel: true,
             isValidName: false,
             isValidEmail: false,
             email: "",
@@ -48,7 +48,7 @@ const app = Vue.createApp({
                     priceA: 8000,
                     priceK: 3000,
                     available: true,
-                    inventory: 10
+                    inventory: 200
                 },
                 {
                     id: 103,
@@ -96,19 +96,35 @@ const app = Vue.createApp({
         showEventDetails(index) {
             this.selectedEvent = index;
         },
-        chargeTotal(total) {
-            this.total = total;
-        },
-        checkInventory() {
+        checkInventory(){
             let allqty = 0;
             allqty += Number(this.qtyK) + Number(this.qtyA);
             console.log(allqty);
-            if (allqty > this.events[this.selectedEvent].inventory) {
-                this.available = false;
-            } else {
-                this.available = true;
+            if(allqty > this.events[this.selectedEvent].inventory){
+                this.availabel=false;
+            }else{
+                this.availabel=true;
             }
-
+        },
+        chargeTotal(total) {
+            this.total = total;
+        },
+        checkName(){
+            if(this.name.length >= 3){
+                this.isValidName=true;
+            }else{
+                this.isValidName=false;
+            }
+        },
+        validateEmail (email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        },
+        checkEmail(){
+            if(this.validateEmail(this.email)){
+                this.isValidEmail=true;
+            }else{
+                this.isValidEmail=false;
+            }
         }
     }
 });

@@ -122,7 +122,7 @@ html {
 }
 
 .tittle-intro {
-    margin: 0 4em;
+    margin: 0;
     margin-bottom: 1em;
     padding: 0;
     font-size: 60px;
@@ -138,7 +138,8 @@ html {
 }
 
 .container-newsletter {
-    margin: 0 30em;
+    width: 30%;
+    margin: auto;
     padding: 0;
     padding-bottom: 5em;
 }
@@ -497,7 +498,6 @@ html {
     .container-event {
         margin: 0;
         padding: 0;
-        margin-bottom: 1em;
     }
 
     .row-events {
