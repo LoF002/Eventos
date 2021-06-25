@@ -414,6 +414,7 @@ html {
   }
 
   .container-newsletter {
+    width: 100%;
     margin: 0;
     padding: 0;
     padding-bottom: 2.5em;
@@ -474,6 +475,7 @@ html {
 
   .container-event {
     margin: 0;
+    margin-bottom: 0.5em;
     padding: 0;
   }
 

@@ -33,7 +33,7 @@
             <header>
                 <nav class="top-bar">
                     <span class="mob-menu fas fa-bars" onclick="openMobileMenu()"></span>
-                    <div class="modal background-dark"></div>
+                    <div class="lof background-dark"></div>
                     <ul class="top-nav">
                         <span class="mob-close far fa-times-circle" onclick="closeMobileMenu()"></span>
 
@@ -80,6 +80,10 @@
                                     </ul>
                                 </div>
                             </nav>
+                        </li>
+
+                        <li class="top-nav-item">
+                            <a class="top-nav-link tittle-categorias" href="#">Login</a>
                         </li>
 
                     </ul>

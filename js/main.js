@@ -129,16 +129,18 @@ const app = Vue.createApp({
     }
 });
 
-let nav = document.body.getElementsByClassName('top-nav')[0];
 
-let modal = document.body.getElementsByClassName('modal')[0];
 
 function openMobileMenu() {
+    let nav = document.body.getElementsByClassName('top-nav')[0];
+    let modal = document.body.getElementsByClassName('lof')[0];
     nav.style.left = "0";
     modal.style.display = "block";
 } //Fin funtion
 
 function closeMobileMenu() {
+    let nav = document.body.getElementsByClassName('top-nav')[0];
+    let modal = document.body.getElementsByClassName('lof')[0];
     nav.style.left = "-24em";
     modal.style.display = "none";
 } //Fin funtion

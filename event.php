@@ -151,7 +151,7 @@
                         <div class="line-modal"></div>
                     </div>
                     <div class="modal-footer">
-                        <button v-if="availabel" v-on:click="chargeTotal((qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal">Siguiente</button>
+                        <button v-if="availabel" v-on:click="chargeTotal((qtyK*events[selectedEvent].priceK) + (qtyA*events[selectedEvent].priceA))" type="button" class="btn modal-btn" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
 
                         <button v-else type="button" class="btn btn-secondary" disabled>Siguiente</button>
                     </div>
