@@ -1,9 +1,5 @@
-$ligth-purple: #573280;
-$purple: #23022E;
-$gray: #E3E4E5;
-
-$regular: 400;
-$bold: 700;
+@import 'vars';
+@import 'media-queries';
 
 body {
     margin: 0;
